@@ -1,4 +1,3 @@
-
 # AluraGeek - E-commerce React App
 
 AluraGeek es una aplicación de comercio electrónico desarrollada en React que permite a los usuarios agregar, editar y eliminar productos. Los productos se almacenan en una base de datos en tiempo real utilizando Firebase. La aplicación tiene un sistema de paginación para mostrar los productos y una interfaz de usuario interactiva con un diseño moderno.
@@ -92,29 +91,13 @@ Asegúrate de tener instalados:
 ├── public/                  # Archivos públicos como el index.html
 ├── src/
 │   ├── components/          # Componentes reutilizables como Form, Card, etc.
+│   ├── lib/                 # Contenido de cn
 │   ├── pages/               # Páginas de la aplicación (Home, etc.)
 │   ├── services/            # Lógica de servicios, como Firebase
-│   ├── types/               # Tipos de TypeScript
+│   ├── types/               # Tipos de Interfaces
 │   └── App.tsx              # Componente principal de la aplicación
 ├── .env                      # Variables de entorno para Firebase
 ├── tailwind.config.js        # Configuración de Tailwind CSS
 └── package.json              # Dependencias y scripts del proyecto
 ```
 
-## Contribuir
-
-Si quieres contribuir a este proyecto, sigue estos pasos:
-
-1. Haz un fork del repositorio.
-2. Crea una rama (`git checkout -b nombre-de-la-rama`).
-3. Haz tus cambios y crea un commit (`git commit -am 'Añadí una nueva funcionalidad'`).
-4. Empuja los cambios a tu rama (`git push origin nombre-de-la-rama`).
-5. Abre un Pull Request describiendo tus cambios.
-
-## Licencia
-
-Este proyecto está bajo la Licencia MIT. Para más detalles, consulta el archivo [LICENSE](LICENSE).
-
----
-
-Gracias por visitar este proyecto. ¡Disfruta contribuyendo y mejorando la aplicación! 😊
