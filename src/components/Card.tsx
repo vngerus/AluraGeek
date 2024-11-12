@@ -17,7 +17,7 @@ const Card: React.FC<CardProps> = ({ name, price, imageUrl, onEdit, onDelete }) 
                 </p>
 
                 <p className="text-xs sm:text-sm text-neutral-400 mb-4 truncate" title={`Precio: $${price !== undefined ? price.toFixed(2) : 'N/A'}`}>
-                    $: ${price !== undefined ? price.toFixed(2) : 'N/A'}
+                    Precio: ${price !== undefined ? price.toFixed(2) : 'N/A'}
                 </p>
 
                 <div className="flex justify-center gap-4 mt-auto">
