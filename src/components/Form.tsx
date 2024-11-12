@@ -1,11 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { Product } from '../types/types';
-
-interface ProductFormProps {
-    onAddProduct: (name: string, price: number, imageUrl: string) => void;
-    onUpdateProduct: (id: string, name: string, price: number, imageUrl: string) => void;
-    editingProduct?: Product | null;
-}
+import React, { useEffect, useState } from 'react';
+import { ProductFormProps } from '../types/types';
+import { BackgroundGradient } from './ui/background-gradient';
 
 const Form: React.FC<ProductFormProps> = ({ onAddProduct, onUpdateProduct, editingProduct }) => {
     const [name, setName] = useState('');
@@ -40,45 +35,53 @@ const Form: React.FC<ProductFormProps> = ({ onAddProduct, onUpdateProduct, editi
     };
 
     return (
-        <form onSubmit={handleSubmit} className="flex flex-col gap-4 p-4 bg-white shadow-lg rounded-lg">
-            <input
-                type="text"
-                placeholder="Nombre..."
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                required
-                className="border rounded p-2 focus:outline-none focus:border-blue-500"
-            />
-            <input
-                type="number"
-                placeholder="Precio..."
-                value={price}
-                onChange={(e) => setPrice(e.target.value)}
-                required
-                className="border rounded p-2 focus:outline-none focus:border-blue-500"
-            />
-            <input
-                type="url"
-                placeholder="Imagen URL..."
-                value={imageUrl}
-                onChange={(e) => setImageUrl(e.target.value)}
-                required
-                className="border rounded p-2 focus:outline-none focus:border-blue-500"
-            />
-            <button
-                type="submit"
-                className="bg-blue-500 text-white py-2 rounded hover:bg-blue-600 transition-colors"
-            >
-                {isEditing ? 'Guardar Cambios' : 'Agregar Producto'}
-            </button>
-            <button
-                type="button"
-                onClick={clearForm}
-                className="bg-gray-500 text-white py-2 rounded hover:bg-gray-600 transition-colors"
-            >
-                Limpiar
-            </button>
-        </form>
+        <BackgroundGradient className="rounded-[22px] p-6 sm:p-10 bg-black">
+            <form onSubmit={handleSubmit} className="flex flex-col items-center gap-6 p-6 shadow-lg rounded-lg max-w-sm mx-auto">
+
+                <input
+                    type="text"
+                    placeholder="nombre..."
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    required
+                    className="w-full p-2 border-2 bg-gray-900  border-blue-500 rounded-md text-lg font-lomo focus:outline-none focus:border-blue-700"
+                />
+
+                <input
+                    type="number"
+                    placeholder="precio..."
+                    value={price}
+                    onChange={(e) => setPrice(e.target.value)}
+                    required
+                    className="w-full p-2 border-2 border-blue-500 rounded-md text-lg font-lomo focus:outline-none focus:border-blue-700"
+                />
+
+                <input
+                    type="url"
+                    placeholder="imagen..."
+                    value={imageUrl}
+                    onChange={(e) => setImageUrl(e.target.value)}
+                    required
+                    className="w-full p-2 border-2 border-blue-500 rounded-md text-lg font-lomo focus:outline-none focus:border-blue-700"
+                />
+
+                <div className="flex gap-4 w-full">
+                    <button
+                        type="submit"
+                        className="w-full py-2 border-2 border-blue-500 text-blue-500 rounded-md font-lomo text-lg hover:text-white hover:bg-blue-600 transition-all"
+                    >
+                        {isEditing ? 'Guardar Cambios' : 'Enviar'}
+                    </button>
+                    <button
+                        type="button"
+                        onClick={clearForm}
+                        className="w-full py-2 border-2 border-red-500 text-red-500 rounded-md font-lomo text-lg hover:bg-red-500 hover:text-white transition-all"
+                    >
+                        Limpiar
+                    </button>
+                </div>
+            </form>
+        </BackgroundGradient>
     );
 };
 
