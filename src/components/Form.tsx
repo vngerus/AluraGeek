@@ -41,7 +41,7 @@ const Form: React.FC<ProductFormProps> = ({ onAddProduct, onUpdateProduct, editi
 
                     <input
                         type="text"
-                        placeholder="Nombre..."
+                        placeholder="Nombre del producto"
                         value={name}
                         onChange={(e) => setName(e.target.value)}
                         required
@@ -50,7 +50,7 @@ const Form: React.FC<ProductFormProps> = ({ onAddProduct, onUpdateProduct, editi
 
                     <input
                         type="number"
-                        placeholder="Precio..."
+                        placeholder="Precio del producto"
                         value={price}
                         onChange={(e) => setPrice(e.target.value)}
                         required
@@ -59,7 +59,7 @@ const Form: React.FC<ProductFormProps> = ({ onAddProduct, onUpdateProduct, editi
 
                     <input
                         type="url"
-                        placeholder="URL de la imagen"
+                        placeholder="URL de la imagen (Ej. https://example.com)"
                         value={imageUrl}
                         onChange={(e) => setImageUrl(e.target.value)}
                         required
