@@ -43,11 +43,11 @@ const HomePage: React.FC = () => {
     };
 
     return (
-        <div className="flex flex-col min-h-screen">
+        <div className="flex flex-col min-h-screen bg-gray-300 ">
             <Header />
-            <main className="flex-grow container mx-auto p-4">
+            <main className="flex-grow container mx-auto p-4 ">
                 <div className="flex flex-col lg:flex-row gap-8 mt-4">
-                    <div className="order-1 lg:order-2 lg:w-1/3 w-full">
+                    <div className="order-1 lg:order-2 lg:w-1/3 w-full ">
                         <h2 className="text-2xl font-bold font-lomo mb-4 text-center  uppercase">Agregar Producto:</h2>
                         <Form onAddProduct={handleAddProduct} onUpdateProduct={handleUpdateProduct} editingProduct={editingProduct} />
                     </div>

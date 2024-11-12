@@ -5,7 +5,7 @@ import { FiEdit, FiTrash2 } from 'react-icons/fi';
 
 const Card: React.FC<CardProps> = ({ name, price, imageUrl, onEdit, onDelete }) => {
     return (
-        <BackgroundGradient className="rounded-[22px] p-4 sm:p-10 bg-black flex flex-col min-h-[300px]">
+        <BackgroundGradient className="rounded-[22px] p-4 sm:p-10 bg-gray-800 flex flex-col min-h-[400px]">
             <div
                 className="w-full h-40 bg-cover bg-center rounded-lg mb-4"
                 style={{ backgroundImage: `url(${imageUrl})` }}
@@ -17,7 +17,7 @@ const Card: React.FC<CardProps> = ({ name, price, imageUrl, onEdit, onDelete }) 
                 </p>
 
                 <p className="text-xs sm:text-sm text-neutral-400 mb-4 truncate" title={`Precio: $${price !== undefined ? price.toFixed(2) : 'N/A'}`}>
-                    Precio: ${price !== undefined ? price.toFixed(2) : 'N/A'}
+                    $: ${price !== undefined ? price.toFixed(2) : 'N/A'}
                 </p>
 
                 <div className="flex justify-center gap-4 mt-auto">
